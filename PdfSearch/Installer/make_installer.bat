@@ -1,7 +1,7 @@
 REM Delete previous artifacts
 DEL /F /Q ..\sources.zip
-DEL /F /Q pdfsearch.msi
-DEL /F /Q pdfsearch64.msi
+DEL /F /Q ..\..\WebPage\download\pdfsearch.msi
+DEL /F /Q ..\..\WebPage\download\pdfsearch64.msi
 SET PATH=C:\Program Files (x86)\7-Zip;C:\Program Files (x86)\WiX Toolset v3.7\bin\;%PATH%
 
 REM Create sources.zip
@@ -16,5 +16,9 @@ light pdfsearch.wixobj
 REM Create installer - 64bit
 candle pdfsearch64.wxs
 light pdfsearch64.wixobj
+
+REM Deploy installer
+MOVE pdfsearch.msi ..\..\WebPage\download
+MOVE pdfsearch64.msi ..\..\WebPage\download
 
 PAUSE

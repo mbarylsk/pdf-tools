@@ -1,6 +1,6 @@
 REM Delete previous artifacts
 DEL /F /Q ..\sources.zip
-DEL /F /Q pdfstamper.msi
+DEL /F /Q ..\..\WebPage\download\pdfstamper.msi
 DEL /F /Q pdfstamper64.msi
 SET PATH=C:\Program Files (x86)\7-Zip;C:\Program Files (x86)\WiX Toolset v3.7\bin\;%PATH%
 
@@ -16,5 +16,9 @@ light pdfstamper.wixobj
 REM Create installer - 64bit
 candle pdfstamper64.wxs
 light pdfstamper64.wixobj
+
+REM Deploy installer
+MOVE pdfstamper.msi ..\..\WebPage\download
+MOVE pdfstamper64.msi ..\..\WebPage\download
 
 PAUSE
