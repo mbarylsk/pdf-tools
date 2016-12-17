@@ -1,0 +1,8 @@
+D:\Sources\PdfTools\PdfStamp\Output\bin\Release\x64\PdfLegalStampForm.exe
+D:\Sources\PdfTools\PdfStamp\Output\bin\Release\x64\PdfLegalStampForm.pdb
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.csprojResolveAssemblyReference.cache
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\WindowsFormsApplication1.Stamp.resources
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\WindowsFormsApplication1.Properties.Resources.resources
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.csproj.GenerateResource.Cache
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.exe
+D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.pdb

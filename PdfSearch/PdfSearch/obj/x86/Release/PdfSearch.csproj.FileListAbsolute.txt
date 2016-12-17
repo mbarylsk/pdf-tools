@@ -1,0 +1,8 @@
+D:\Sources\Github\pdf-tools\PdfSearch\Output\bin\Release\PdfSearch.exe
+D:\Sources\Github\pdf-tools\PdfSearch\Output\bin\Release\PdfSearch.pdb
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.csprojResolveAssemblyReference.cache
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.Form1.resources
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.Properties.Resources.resources
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.csproj.GenerateResource.Cache
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.exe
+D:\Sources\Github\pdf-tools\PdfSearch\PdfSearch\obj\x86\Release\PdfSearch.pdb
