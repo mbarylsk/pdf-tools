@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?define ProductVersion = "1.0.9"?>
+<?define ProductUpgradeCode = "12345678-1587-0000-0001-111111111164"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+   <Product Id="*" UpgradeCode="$(var.ProductUpgradeCode)" 
+            Name="PdfStamper" Version="$(var.ProductVersion)" Manufacturer="Marcin Barylski" Language="1033">
+      <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
+      <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
+	    <Icon Id="ProductIcon" SourceFile="..\Resources\Pictures\pdfstamp.ico"/>
+      <Property Id="ARPPRODUCTICON" Value="ProductIcon"/>
+      <Property Id="ARPHELPLINK" Value="http://tas.easyisp.pl"/>
+      <Property Id="ARPURLINFOABOUT" Value="http://tas.easyisp.pl"/>
+      <Property Id="ARPNOREPAIR" Value="1"/>
+      <Property Id="ARPNOMODIFY" Value="1"/>
+      <Upgrade Id="$(var.ProductUpgradeCode)">
+         <UpgradeVersion Minimum="$(var.ProductVersion)" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
+         <UpgradeVersion Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMinimum="yes" IncludeMaximum="no" 
+                         Property="OLDERVERSIONBEINGUPGRADED"/>	  
+      </Upgrade>
+      <Condition Message="A newer version of this software is already installed.">NOT NEWERVERSIONDETECTED</Condition>
+	  
+      <Directory Id="TARGETDIR" Name="SourceDir">
+         <Directory Id="ProgramFilesFolder">
+            <Directory Id="INSTALLDIR" Name="PdfStamper">
+               <Component Id="ApplicationFiles" Guid="12345678-1587-0064-0001-111111111112">
+                  <File Id="ApplicationFile1" Source="../Output/bin/Release/x64/PdfLegalStampForm.exe"/>
+				  <File Id="ApplicationFile2" Source="../../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
+				  <File Id="ApplicationFile3" Source="../../itextsharp/license.txt"/>
+				  <File Id="ApplicationFile4" Source="../sources.zip"/>
+               </Component>
+            </Directory>           
+         </Directory>
+		 
+		 <Directory Id="ProgramMenuFolder">
+            <Directory Id="ProgramMenuSubfolder" Name="PdfStamper">
+               <Component Id="ApplicationShortcuts" Guid="12345678-1587-0064-0001-111111111113">
+                  <Shortcut Id="ApplicationShortcut1" Name="PdfStamper" Description=".pdf Stamper" 
+                            Target="[INSTALLDIR]PdfLegalStampForm.exe" WorkingDirectory="INSTALLDIR" Icon="ProductIcon"/>
+                  <Shortcut Id="UninstallProduct"
+                            Name="Uninstall PdfStamper"
+                            Description="Uninstalls .pdf Stamper"
+                            Target="[System64Folder]msiexec.exe"
+                            Arguments="/x [ProductCode]"/>
+                  <RegistryValue Root="HKCU" Key="Software\Marcin Barylski\PdfStamper" 
+                            Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                  <RemoveFolder Id="ProgramMenuSubfolder" On="uninstall"/>
+               </Component>
+            </Directory>
+         </Directory>
+      </Directory>
+	  
+	  <InstallExecuteSequence>
+         <RemoveExistingProducts After="InstallValidate"/>
+      </InstallExecuteSequence>
+
+      <Feature Id="DefaultFeature" Level="1">
+         <ComponentRef Id="ApplicationFiles"/>
+		 <ComponentRef Id="ApplicationShortcuts"/>
+      </Feature>
+   </Product>
+</Wix>
