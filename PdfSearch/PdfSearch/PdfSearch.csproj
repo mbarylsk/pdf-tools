@@ -94,6 +94,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="..\Installer\make_installer.bat">
+      <Link>make_installer.bat</Link>
+    </None>
+    <None Include="..\Installer\pdfsearch.wxs">
+      <Link>pdfsearch.wxs</Link>
+    </None>
+    <None Include="..\Installer\pdfsearch64.wxs">
+      <Link>pdfsearch64.wxs</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,8 +137,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>call "$(SolutionDir)Installer\make_installer.bat"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

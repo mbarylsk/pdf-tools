@@ -1,15 +1,31 @@
 <?xml version="1.0"?>
-<?define ProductVersion = "1.0.14"?>
+<!--
+Copyright (C) 2015-2016  Marcin Barylski
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<?define ProductVersion = "1.0.15"?>
 <?define ProductUpgradeCode = "12345678-1587-0000-0000-111111111111"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
    <Product Id="*" UpgradeCode="$(var.ProductUpgradeCode)" 
             Name="PdfSearch" Version="$(var.ProductVersion)" Manufacturer="Marcin Barylski" Language="1033">
       <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
       <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
-	    <Icon Id="ProductIcon" SourceFile="..\Resources\Pictures\pdfsearch.ico"/>
+	    <Icon Id="ProductIcon" SourceFile="Resources\Pictures\pdfsearch.ico"/>
       <Property Id="ARPPRODUCTICON" Value="ProductIcon"/>
-      <Property Id="ARPHELPLINK" Value="http://tas.easyisp.pl"/>
-      <Property Id="ARPURLINFOABOUT" Value="http://tas.easyisp.pl"/>
+      <Property Id="ARPHELPLINK" Value="https://github.com/mbarylsk/pdf-tools"/>
+      <Property Id="ARPURLINFOABOUT" Value="https://github.com/mbarylsk/pdf-tools"/>
       <Property Id="ARPNOREPAIR" Value="1"/>
       <Property Id="ARPNOMODIFY" Value="1"/>
       <Upgrade Id="$(var.ProductUpgradeCode)">
@@ -23,10 +39,10 @@
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="PdfSearch">
                <Component Id="ApplicationFiles" Guid="12345678-1587-0000-0000-111111111112">
-                  <File Id="ApplicationFile1" Source="../Output/bin/Release/PdfSearch.exe"/>
-				  <File Id="ApplicationFile2" Source="../../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
-				  <File Id="ApplicationFile3" Source="../sources.zip"/>
-				  <File Id="ApplicationFile4" Source="../../itextsharp/license.txt"/>
+                  <File Id="ApplicationFile1" Source="Output/bin/Release/PdfSearch.exe"/>
+				  <File Id="ApplicationFile2" Source="../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
+				  <File Id="ApplicationFile3" Source="sources.zip"/>
+				  <File Id="ApplicationFile4" Source="../itextsharp/license.txt"/>
                </Component>
             </Directory>           
          </Directory>

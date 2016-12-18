@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
-<?define ProductVersion = "1.0.14"?>
+<?define ProductVersion = "1.0.15"?>
 <?define ProductUpgradeCode = "12345678-1587-0000-0000-111111111164"?>
+
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
    <Product Id="*" UpgradeCode="$(var.ProductUpgradeCode)" 
             Name="PdfSearch" Version="$(var.ProductVersion)" Manufacturer="Marcin Barylski" Language="1033">
       <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
       <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
-	    <Icon Id="ProductIcon" SourceFile="..\Resources\Pictures\pdfsearch.ico"/>
+	    <Icon Id="ProductIcon" SourceFile="Resources\Pictures\pdfsearch.ico"/>
       <Property Id="ARPPRODUCTICON" Value="ProductIcon"/>
-      <Property Id="ARPHELPLINK" Value="http://tas.easyisp.pl"/>
-      <Property Id="ARPURLINFOABOUT" Value="http://tas.easyisp.pl"/>
+      <Property Id="ARPHELPLINK" Value="https://github.com/mbarylsk/pdf-tools"/>
+      <Property Id="ARPURLINFOABOUT" Value="https://github.com/mbarylsk/pdf-tools"/>
       <Property Id="ARPNOREPAIR" Value="1"/>
       <Property Id="ARPNOMODIFY" Value="1"/>
       <Upgrade Id="$(var.ProductUpgradeCode)">
@@ -23,10 +24,10 @@
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="PdfSearch">
                <Component Id="ApplicationFiles" Guid="12345678-1587-0064-0000-111111111112">
-                  <File Id="ApplicationFile1" Source="../Output/bin/Release/PdfSearch.exe"/>
-				  <File Id="ApplicationFile2" Source="../../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
-				  <File Id="ApplicationFile3" Source="../sources.zip"/>
-				  <File Id="ApplicationFile4" Source="../../itextsharp/license.txt"/>
+                  <File Id="ApplicationFile1" Source="Output/bin/Release/PdfSearch.exe"/>
+				  <File Id="ApplicationFile2" Source="../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
+				  <File Id="ApplicationFile3" Source="sources.zip"/>
+				  <File Id="ApplicationFile4" Source="../itextsharp/license.txt"/>
                </Component>
             </Directory>           
          </Directory>
