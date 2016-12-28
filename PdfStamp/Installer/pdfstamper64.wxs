@@ -6,7 +6,7 @@
             Name="PdfStamper" Version="$(var.ProductVersion)" Manufacturer="Marcin Barylski" Language="1033">
       <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
       <Media Id="1" Cabinet="product.cab" EmbedCab="yes"/>
-	    <Icon Id="ProductIcon" SourceFile="..\Resources\Pictures\pdfstamp.ico"/>
+	    <Icon Id="ProductIcon" SourceFile="Resources\Pictures\pdfstamp.ico"/>
       <Property Id="ARPPRODUCTICON" Value="ProductIcon"/>
       <Property Id="ARPHELPLINK" Value="http://tas.easyisp.pl"/>
       <Property Id="ARPURLINFOABOUT" Value="http://tas.easyisp.pl"/>
@@ -23,10 +23,10 @@
          <Directory Id="ProgramFilesFolder">
             <Directory Id="INSTALLDIR" Name="PdfStamper">
                <Component Id="ApplicationFiles" Guid="12345678-1587-0064-0001-111111111112">
-                  <File Id="ApplicationFile1" Source="../Output/bin/Release/x64/PdfLegalStampForm.exe"/>
-				  <File Id="ApplicationFile2" Source="../../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
-				  <File Id="ApplicationFile3" Source="../../itextsharp/license.txt"/>
-				  <File Id="ApplicationFile4" Source="../sources.zip"/>
+                  <File Id="ApplicationFile1" Source="Output/bin/Release/x64/PdfLegalStampForm.exe"/>
+				  <File Id="ApplicationFile2" Source="../itextsharp/itextsharp-dll-core/itextsharp.dll"/>
+				  <File Id="ApplicationFile3" Source="../itextsharp/license.txt"/>
+				  <File Id="ApplicationFile4" Source="sources.zip"/>
                </Component>
             </Directory>           
          </Directory>

@@ -1,5 +1,5 @@
-set my_path="D:\Sources\Github\pdf-tools\PdfSearch"
-cd %my_path%
+SET my_path="D:\Sources\Github\pdf-tools\PdfSearch"
+CD %my_path%
 
 REM Delete previous artifacts
 DEL /F /Q sources.zip
@@ -24,4 +24,9 @@ REM Deploy installer
 MOVE pdfsearch.msi ..\WebPage\download
 MOVE pdfsearch64.msi ..\WebPage\download
 
-PAUSE
+REM Cleanup
+DEL /F /Q pdfsearch.wixobj
+DEL /F /Q pdfsearch.wixpdb
+DEL /F /Q pdfsearch64.wixobj
+DEL /F /Q pdfsearch64.wixpdb
+DEL /F /Q sources.zip

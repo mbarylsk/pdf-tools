@@ -6,3 +6,10 @@ D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\WindowsFormsAppli
 D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.csproj.GenerateResource.Cache
 D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.exe
 D:\Sources\PdfTools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.pdb
+D:\Sources\Github\pdf-tools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.exe
+D:\Sources\Github\pdf-tools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.pdb
+D:\Sources\Github\pdf-tools\PdfStamp\Output\bin\Release\x64\PdfLegalStampForm.exe
+D:\Sources\Github\pdf-tools\PdfStamp\Output\bin\Release\x64\PdfLegalStampForm.pdb
+D:\Sources\Github\pdf-tools\PdfStamp\PdfLegalStampForm\obj\x64\Release\WindowsFormsApplication1.Stamp.resources
+D:\Sources\Github\pdf-tools\PdfStamp\PdfLegalStampForm\obj\x64\Release\WindowsFormsApplication1.Properties.Resources.resources
+D:\Sources\Github\pdf-tools\PdfStamp\PdfLegalStampForm\obj\x64\Release\PdfLegalStampForm.csproj.GenerateResource.Cache
