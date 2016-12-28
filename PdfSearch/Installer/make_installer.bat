@@ -1,4 +1,4 @@
-SET my_path="D:\Sources\Github\pdf-tools\PdfSearch"
+SET my_path=%1
 CD %my_path%
 
 REM Delete previous artifacts
