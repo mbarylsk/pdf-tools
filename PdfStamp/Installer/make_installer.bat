@@ -8,8 +8,8 @@ DEL /F /Q ..\WebPage\download\pdfstamper64.msi
 SET PATH=C:\Program Files (x86)\7-Zip;C:\Program Files (x86)\WiX Toolset v3.7\bin\;%PATH%
 
 REM Create sources.zip
-RMDIR /S /Q ..\PdfLegalStampForm\bin\
-RMDIR /S /Q ..\PdfLegalStampForm\obj\
+RMDIR /S /Q PdfLegalStampForm\bin\
+RMDIR /S /Q PdfLegalStampForm\obj\
 7z.exe a sources.zip PdfLegalStampForm
 
 REM Create installer - 32bit
